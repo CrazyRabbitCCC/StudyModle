@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="study.lzy.qqimitate.MainActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_say"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/love"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/circle_gray"
+                android:src="@drawable/love" />
+
+            <Button
+                android:id="@+id/say"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/gray_bound"
+                android:text="按 住      说 话" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_write"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:visibility="visible">
+
+
+            <ImageButton
+                android:id="@+id/voice"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/circle_gray"
+                android:src="@drawable/voice" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/green_line"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:padding="4dp">
+
+                <EditText
+                    android:id="@+id/edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null" />
+
+                <ImageButton
+                    android:id="@+id/emoji"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/emoji" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle_gray"
+            android:src="@drawable/add" />
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle_gray"
+            android:gravity="center"
+            android:src="@drawable/send" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <LinearLayout
+                android:id="@+id/test0_0"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/test0_1"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/test0_2"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/test0_3"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <LinearLayout
+                android:id="@+id/test1_0"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/test1_1"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/test1_2"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/test1_3"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/emoji" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="test"
+                    android:textColor="#000" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/big_window_layout"
+    android:layout_width="300dp"
+    android:layout_height="194dp"
+    android:background="@drawable/pic"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="记账"
+        tools:text="ｔｉｔｌｅ"
+        android:textSize="25sp"
+        android:layout_height="50dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#03ffff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:text="用途  "/>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:text="金额  "/>
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#03ffff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dip"
+            android:layout_gravity="center_horizontal"
+            android:background="#2000"
+            android:text="保存" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#03ffff"/>
+        <Button
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dip"
+            android:layout_gravity="center_horizontal"
+            android:background="#2000"
+            android:text="返回" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Switch
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/black_body"
+        android:text="显示悬浮窗"
+        android:id="@+id/float_show" />
+
+    <Switch
+        android:visibility="gone"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="只在桌面显示"
+        android:background="@drawable/black_body"
+        android:id="@+id/home_only" />
+    <Switch
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_body"
+        android:id="@+id/bar_resident"
+        android:text="常驻通知栏"/>
+    <Switch
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@drawable/black_body"
+        android:id="@+id/timing_alerts"
+        android:text="定时提醒"/>
+    <LinearLayout
+        android:id="@+id/time_layout"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:background="@drawable/black_body"
+        android:gravity="center_vertical"
+        android:layout_height="36dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:padding="8dp"
+            android:textColor="#000"
+            android:text="时间"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:textColor="#000"
+            android:id="@+id/time"
+            android:gravity="center"
+            android:background="@drawable/et_selecter"/>
+    </LinearLayout>
+    <TextView
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:textColor="#000"
+        android:background="@drawable/right_arrow"
+        android:id="@+id/password"
+        android:text="密码保护\n\n已启用"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StudyModle.iml" filepath="$PROJECT_DIR$/StudyModle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidviewbadger/androidviewbadger.iml" filepath="$PROJECT_DIR$/androidviewbadger/androidviewbadger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/designexample/designexample.iml" filepath="$PROJECT_DIR$/designexample/designexample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/drawabletinttest/drawabletinttest.iml" filepath="$PROJECT_DIR$/drawabletinttest/drawabletinttest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dribble/dribble.iml" filepath="$PROJECT_DIR$/dribble/dribble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/money/money.iml" filepath="$PROJECT_DIR$/money/money.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qqimitate/qqimitate.iml" filepath="$PROJECT_DIR$/qqimitate/qqimitate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/treemodle/treemodle.iml" filepath="$PROJECT_DIR$/treemodle/treemodle.iml" />
+    </modules>
+  </component>
+</project>

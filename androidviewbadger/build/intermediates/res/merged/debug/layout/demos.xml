@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<FlagView.sample.BadgeView
+				android:layout_gravity="center"
+				android:id="@+id/main_dfv"
+				android:layout_width="20dp"
+				android:layout_height="20dp" />
+
+			<ImageView
+				android:layout_width="wrap_content"
+				android:src="@drawable/icon"
+				android:layout_height="wrap_content"
+				android:id="@+id/default_target"
+				android:layout_gravity="center" />
+
+			<TextView
+				android:id="@+id/default_label"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Default"
+				android:layout_gravity="center" />
+
+		</LinearLayout>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Position"
+			android:id="@+id/position_target"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Size/Colour"
+			android:id="@+id/colour_target"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Animate (default)"
+			android:id="@+id/anim1_target"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Animate (custom)"
+			android:id="@+id/anim2_target"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Custom background drawable"
+			android:id="@+id/custom_target"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Tab"
+			android:id="@+id/tab_btn"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Clickable"
+			android:id="@+id/click_target"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="Increment"
+			android:id="@+id/increment_target"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+
+		<TextView
+			android:gravity="center"
+			android:background="@android:drawable/btn_default"
+			android:textSize="15sp"
+			android:textColor="#000"
+			android:text="self_badge"
+			android:id="@+id/main_btn"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+
+
+
+
+	</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="查看" />
+
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_menu_send"
+            android:title="记账" />
+        <item
+            android:id="@+id/nav_config"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="设置" />
+    </group>
+    <item android:title="系统">
+        <menu>
+            <item
+                android:icon="@drawable/ic_menu_gallery"
+                android:id="@+id/nav_photo"
+                android:title="设置背景"/>
+            <item
+                android:id="@+id/nav_out"
+                android:icon="@drawable/nav_out"
+                android:title="退出" />
+
+        </menu>
+    </item>
+
+</menu>

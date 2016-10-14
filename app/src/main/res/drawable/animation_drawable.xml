@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/horse_i" android:duration="100"/>
+    <item android:drawable="@drawable/horse_j" android:duration="100"/>
+    <item android:drawable="@drawable/horse_k" android:duration="100"/>
+    <item android:drawable="@drawable/horse_l" android:duration="100"/>
+    <item android:drawable="@drawable/horse_m" android:duration="100"/>
+    <item android:drawable="@drawable/horse_n" android:duration="100"/>
+    <item android:drawable="@drawable/horse_o" android:duration="100"/>
+    <item android:drawable="@drawable/horse_p" android:duration="100"/>
+</animation-list>

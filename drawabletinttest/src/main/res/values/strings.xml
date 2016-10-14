@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DrawableTintTest</string>
+    <string-array name="blend_modes">
+        <item>Add</item>
+        <item>Clear</item>
+        <item>Darken</item>
+        <item>Destination (DST)</item>
+        <item>Destination atop (DST_ATOP)</item>
+        <item>Destination in (DST_IN)</item>
+        <item>Destination out (DST_OUT)</item>
+        <item>Destination over (DST_OVER)</item>
+        <item>Lighten</item>
+        <item>Multiply</item>
+        <item>Overlay</item>
+        <item>Screen</item>
+        <item>Source (SRC)</item>
+        <item>Source atop (SRC_ATOP)</item>
+        <item>Source in (SRC_IN)</item>
+        <item>Source out (SRC_OUT)</item>
+        <item>Source over (SRC_OVER)</item>
+        <item>XOR</item>
+    </string-array>
+</resources>

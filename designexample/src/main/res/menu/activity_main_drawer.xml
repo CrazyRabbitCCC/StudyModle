@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_as" android:icon="@drawable/ic_menu_camera"
+            android:title="AndroidStudio" />
+        <item android:id="@+id/nav_n" android:icon="@drawable/ic_menu_gallery"
+            android:title="Android N" />
+        <item android:id="@+id/nav_bottom_bar" android:icon="@drawable/ic_menu_slideshow"
+            android:title="BottomBar" />
+        <item android:id="@+id/nav_git" android:icon="@drawable/ic_menu_manage"
+            android:title="Git命令" />
+    </group>
+
+    <item android:title="其他">
+        <menu>
+            <item android:id="@+id/nav_snackbar" android:icon="@drawable/ic_menu_share"
+                android:title="SnackBar" />
+            <item android:id="@+id/nav_data_binding" android:icon="@drawable/ic_menu_send"
+                android:title="Data Binding" />
+        </menu>
+    </item>
+
+</menu>

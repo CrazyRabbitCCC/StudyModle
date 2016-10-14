@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:background="#c0c0c0"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_gn"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="用途"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:singleLine="true"
+        android:background="#fff"
+       />
+    <TextView
+        android:background="#fff"
+        android:id="@+id/tv_money"
+        android:singleLine="true"
+        android:layout_width="70dp"
+        android:text="金额"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:layout_height="40dp"
+        />
+    <TextView
+        android:id="@+id/tv_time"
+        android:background="#fff"
+        android:text="时间"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:singleLine="true"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
