@@ -15,7 +15,6 @@ import study.lzy.qqimitate.Adapter.BaseHolder;
 import study.lzy.qqimitate.R;
 import study.lzy.qqimitate.TestActivity;
 import study.lzy.qqimitate.WxApplication;
-import study.lzy.qqimitate.selfView.BadgeView;
 import study.lzy.qqimitate.selfView.MessageView;
 
 public class AboutFragment extends BaseFragment {
@@ -31,6 +30,7 @@ public class AboutFragment extends BaseFragment {
                 Intent intent=new Intent(getActivity(),item.getTo());
                 intent.putExtra("Message",item.getText());
                 startActivity(intent);
+                //so?
             }
         };
     }
