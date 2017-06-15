@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "F:\\lzy\\StudyModle\\androidviewbadger\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "D:\\android\\projects\\StudyModle\\androidviewbadger\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 111
                 },
                 "from": {
-                    "file": "F:\\lzy\\StudyModle\\androidviewbadger\\src\\main\\res\\values\\strings.xml",
+                    "file": "D:\\android\\projects\\StudyModle\\androidviewbadger\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 57,
                         "endColumn": 60,
-                        "endOffset": 111
+                        "endOffset": 113
                     }
                 }
             }

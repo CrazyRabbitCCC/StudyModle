@@ -19,7 +19,6 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import study.lzy.qqimitate.Bean.UserBean;
@@ -28,7 +27,6 @@ import study.lzy.qqimitate.Fragment.AboutFragment;
 import study.lzy.qqimitate.Fragment.DiscoverFragment;
 import study.lzy.qqimitate.Fragment.FriendFragment;
 import study.lzy.qqimitate.Fragment.WeixinFragment;
-import study.lzy.qqimitate.Info.User;
 import study.lzy.qqimitate.selfView.BadgeView;
 import study.lzy.qqimitate.selfView.TabView;
 
@@ -95,9 +93,6 @@ public class MainActivity extends AppCompatActivity{
         tab = (TabLayout) findViewById(R.id.tab);
         parent=findViewById(R.id.parent);
 
-        badgeView = new BadgeView(this,tab);
-        badgeView.setLittlePoint();
-        badgeView.show();
         tab.setSelectedTabIndicatorHeight(0);
 //        tab.setTabMode(TabLayout.MODE_SCROLLABLE);
         tab.setTabMode(TabLayout.MODE_FIXED);
@@ -109,7 +104,6 @@ public class MainActivity extends AppCompatActivity{
         for (int i=0;i<myPagerAdapter.getCount();i++){
             TabLayout.Tab tab = this.tab.newTab().setText(myPagerAdapter.getPageTitle(i));
              tab = tab.setCustomView(myPagerAdapter.getTabView(i));
-
             this.tab.addTab(tab,false);
 
         }
@@ -234,23 +228,19 @@ public class MainActivity extends AppCompatActivity{
                 case 0:
                     tabView.setImage(R.mipmap.chats,
                             R.mipmap.chats_green,0);
-                    tabView.setBadgeView("");
                     break;
                 case 1:
                     tabView.setImage(R.mipmap.contacts,
                             R.mipmap.contacts_green,0);
-                    tabView.setBadgeView("2");
                     break;
                 case 2:
                     tabView.setImage(R.mipmap.discover,
                             R.mipmap.discover_green,
                             R.mipmap.discover_white);
-                    tabView.setBadgeView("3");
                     break;
                 case 3:
                     tabView.setImage(R.mipmap.about_me,
                             R.mipmap.about_me_green,0);
-                    tabView.setBadgeView("4");
                     break;
             }
             return tabView;
