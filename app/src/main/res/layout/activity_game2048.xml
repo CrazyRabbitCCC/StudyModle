@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/score"
         android:textSize="25sp"
         android:textColor="#f00"
-        android:text="Score: 2048"
+        android:text="Score: 0"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_weight="1"
+        android:layout_height="110dp"
         android:gravity="center"/>
 
-    <study.lzy.studymodle.Game2048.GameView
+
+    <GridLayout
         android:id="@+id/game"
-        android:background="#c3b1d4"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:layout_weight="1"/>
+        android:layout_gravity="bottom"
+        >
+    </GridLayout>
 
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

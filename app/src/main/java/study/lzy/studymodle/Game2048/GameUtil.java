@@ -1,10 +1,10 @@
-package study.lzy.studymodle.Game2048;// @author: lzy  time: 2016/09/19.
+package study.lzy.studymodle.Game2048;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -14,9 +14,15 @@ import android.widget.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameView extends GridLayout {
+import study.lzy.studymodle.Utils.BaseUtil;
 
-    private static final String TAG = "GameView";
+/**
+ * @author Gavin
+ * @date 2017/06/14.
+ */
+
+public class GameUtil implements View.OnTouchListener{
+    private static final String TAG = "GameUtil";
 
     private List<int[][]> lastData = new ArrayList<>();
     List<Integer> data;
@@ -27,36 +33,39 @@ public class GameView extends GridLayout {
     private CardView[][] cards = new CardView[4][4];
     private boolean ScoreChanged=false;
     private boolean success=false;
+    private GridLayout gameLayout;
 
-    public GameView(Context context) {
-        this(context, null);
-    }
-
-    public GameView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public GameView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
+    public GameUtil(GridLayout gridLayout,Context context) {
+        gameLayout = gridLayout;
         mContext = context;
         init();
     }
 
     private void init() {
-        setBackgroundColor(Color.rgb(0xc3, 0xb1, 0xd4));
-        setColumnCount(4);
-
-    }
-
-    @Override
-    protected void onMeasure(int widthSpec, int heightSpec) {
-        super.onMeasure(widthSpec, heightSpec);
-        cardSide = (Math.min(widthSpec, heightSpec)) / 4;
+        gameLayout.setBackgroundColor(Color.rgb(0xc3, 0xb1, 0xd4));
+        gameLayout.setColumnCount(4);
+//        gameLayout.measure(0,0);
+//        cardSide = (Math.min(gameLayout.getMeasuredWidth(), gameLayout.getMeasuredHeight())) / 4;
+        DisplayMetrics screenMetrics = BaseUtil.getScreenMetrics(mContext);
+//        ViewGroup.LayoutParams params = gameLayout.getLayoutParams();
+//        if (params==null)
+//            params = new GridLayout.LayoutParams();
+//        params.width = screenMetrics.widthPixels;
+//        params.height = screenMetrics.heightPixels;
+//        gameLayout.setLayoutParams(params);
+        cardSide = screenMetrics.widthPixels / 4 ;
+//        cardSide =100;
         addCard(cardSide);
+        gameLayout.setOnTouchListener(this);
+
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
+    public boolean onTouch(View v, MotionEvent event) {
+        return onTouchEvent(event);
+    }
+
+    private boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 downPix = new Pixes(event.getX(), event.getY());
@@ -68,12 +77,12 @@ public class GameView extends GridLayout {
                     break;
 
                 if (!checkResult()){
-                    Snackbar.make(this,"游戏结束，你的成绩是"+getScore(),Snackbar.LENGTH_LONG)
-                            .setAction("重试", new OnClickListener() {
+                    Snackbar.make(gameLayout,"游戏结束，你的成绩是"+getScore(),Snackbar.LENGTH_LONG)
+                            .setAction("重试", new View.OnClickListener() {
                                 @Override public void onClick(View v) {
                                     restart();
                                 }
-                            });
+                            }).show();
                     break;
                 }
                 lastGameNum = getGameNum();
@@ -94,7 +103,6 @@ public class GameView extends GridLayout {
                     } else {
                         Log.i(TAG, "bottom");
                         bottom();
-
                     }
                 }
                 if (!move){
@@ -113,11 +121,9 @@ public class GameView extends GridLayout {
                 }
                 break;
         }
-
-
         return true;
     }
-private boolean move = false;
+    private boolean move = false;
     private void bottom() {
         for (int i = 0; i < 4; i++) {
             int x = 3;
@@ -239,24 +245,17 @@ private boolean move = false;
         }
     }
 
-    @Override
-    protected void onSizeChanged(int w, int h, int oldW, int oldH) {
-
-        cardSide = (Math.min(w, h)) / 4;
-        addCard(cardSide);
-        super.onSizeChanged(w, h, oldW, oldH);
-    }
 
     private void addCard(int cardSide) {
-        removeAllViews();
+        gameLayout.removeAllViews();
         ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(cardSide, cardSide);
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 CardView card = new CardView(mContext);
-                addView(card, lp);
+                gameLayout.addView(card, lp);
                 card.setNum(0);
-                if ((i*4+j)!=0)
-                    card.setNum(DoNum(2, (i*4+j+1)));
+//                if ((i*4+j)!=0)
+//                    card.setNum(DoNum(2, (i*4+j+1)));
                 cards[j][i] = card;
                 change=true;
 //                Log.e(TAG,"" + DoNum(2, (i*4+j)));
@@ -275,7 +274,7 @@ private boolean move = false;
             if (cards[i/4][i%4].getNum()==0)
                 emptyNum++;
             if (!success&&cards[i/4][i%4].getNum()==2048) {
-                Snackbar.make(this, "成功", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(gameLayout, "成功", Snackbar.LENGTH_SHORT).show();
                 success = true;
             }
         }
@@ -291,7 +290,7 @@ private boolean move = false;
             for (int j=0;j<3;j++){
                 int num = cards[i][j].getNum();
                 if (i<3&&cards[i+1][j].getNum()==num)
-                        return true;
+                    return true;
 
                 if (cards[i][j+1].getNum()==num)
                     return true;
@@ -319,8 +318,8 @@ private boolean move = false;
     private void addCard() {
         int emptyNum = getEmptyCardNum();
         if (!checkResult()){
-            Snackbar.make(this,"游戏结束，你的成绩是"+getScore(),Snackbar.LENGTH_LONG)
-                    .setAction("重试", new OnClickListener() {
+            Snackbar.make(gameLayout,"游戏结束，你的成绩是"+getScore(),Snackbar.LENGTH_LONG)
+                    .setAction("重试", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             restart();
@@ -345,13 +344,13 @@ private boolean move = false;
                 }
         }
         if (!checkResult()){
-            Snackbar.make(this,"游戏结束，你的成绩是"+getScore(),Snackbar.LENGTH_LONG)
-                    .setAction("重试", new OnClickListener() {
+            Snackbar.make(gameLayout,"游戏结束，你的成绩是"+getScore(),Snackbar.LENGTH_LONG)
+                    .setAction("重试", new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             restart();
                         }
-                    });
+                    }).show();
         }
 //        lastData.clear();
 //        lastData.addAll(data);
@@ -374,17 +373,19 @@ private boolean move = false;
         return ScoreChanged;
     }
 
-//x^Y
-   private int DoNum(int X,int Y){
-       int num=1;
-       if (Y>0)
-       return X^Y;
+    //x^Y
+    private int DoNum(int X,int Y){
+        int num=1;
+        if (Y>0)
+            return X^Y;
 //       if (Y>0)
 //           for (int i=0;i<Y;i++)
 //               num*=X;
 
-       return num;
-   }
+        return num;
+    }
+
+
 
     class Pixes {
         public Pixes(float x, float y) {
@@ -394,3 +395,4 @@ private boolean move = false;
         float x = 0f, y = 0f;
     }
 }
+
