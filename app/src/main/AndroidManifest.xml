@@ -27,7 +27,15 @@
         <activity android:name=".MesagePoint.DemoActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".PermissionActivity"/>
-
+        <activity android:name=".sweep.SweepActivity"/>
+        <activity android:name=".star.StarActivity"/>
+        <activity android:name=".toolbar.ToolBarActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".toolbar.CollapsingActivity"
+                  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".gomoku.GomokuActivity"/>
+        <activity android:name=".chess.InterChessActivity"/>
+        <activity android:name=".star.星星页面"/>
     </application>
 
 

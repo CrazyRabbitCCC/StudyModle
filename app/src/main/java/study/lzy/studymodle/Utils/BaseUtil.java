@@ -10,7 +10,6 @@ import java.util.List;
 
 public class BaseUtil {
 
-
     public static DisplayMetrics getScreenMetrics(Context context) {
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics dm = new DisplayMetrics();

@@ -28,6 +28,13 @@ import study.lzy.studymodle.Phone.PhoneActivity;
 import study.lzy.studymodle.SenirView.VideoViewActivity;
 import study.lzy.studymodle.Tree.DividerItemDecoration;
 import study.lzy.studymodle.Tree.TreeActivity;
+import study.lzy.studymodle.chess.InterChessActivity;
+import study.lzy.studymodle.gomoku.GomokuActivity;
+import study.lzy.studymodle.star.StarActivity;
+import study.lzy.studymodle.star.星星页面;
+import study.lzy.studymodle.sweep.SweepActivity;
+import study.lzy.studymodle.toolbar.CollapsingActivity;
+import study.lzy.studymodle.toolbar.ToolBarActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,13 +53,10 @@ public class MainActivity extends AppCompatActivity {
         rv.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         rv.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
         adapter = new Adapter();
-        adapter.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v, int position) {
-                if (adapter.getItem(position).intent != null) {
-                    startActivity(adapter.getItem(position).intent);
-                    overridePendingTransition(R.anim.translate_enter,R.anim.translate_exit);
-                }
+        adapter.setOnClickListener((v, position) -> {
+            if (adapter.getItem(position).intent != null) {
+                startActivity(adapter.getItem(position).intent);
+                overridePendingTransition(R.anim.translate_enter,R.anim.translate_exit);
             }
         });
         rv.setAdapter(adapter);
@@ -66,11 +70,21 @@ public class MainActivity extends AppCompatActivity {
         add("2048", Game2048Activity.class);
         add("可拖动小红点", DemoActivity.class);
         add("权限管理", PermissionActivity.class);
+        add("扫雷", SweepActivity.class);
+        add("消灭星星", StarActivity.class);
+        add("消灭星星", 星星页面.class,R.drawable.eaten);
+        add("toolbar", ToolBarActivity.class);
+        add("toolbar2", CollapsingActivity.class);
+        add("五子棋", GomokuActivity.class);
+        add("国际象棋", InterChessActivity.class,R.drawable.black_horse);
     }
 
     private void add(String text, Class<?> cls) {
+        add(text,cls,-1);
+    }
+    private void add(String text, Class<?> cls,int imageId) {
         Intent intent = new Intent(this, cls);
-        adapter.add(new ClickIntent(text, intent));
+        adapter.add(new ClickIntent(text, intent,imageId));
     }
 
     class Adapter extends BaseAdapter {
@@ -93,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
         public void onBindViewHolder(Holder holder, int position) {
             holder.image.setVisibility(View.VISIBLE);
             holder.text.setText(list.get(position).text);
+            if (getItem(position).imageId!=-1){
+                holder.image.setImageResource(getItem(position).imageId);
+            }
         }
 
         public ClickIntent getItem(int position) {
@@ -112,7 +129,14 @@ public class MainActivity extends AppCompatActivity {
             this.intent = intent;
         }
 
+        public ClickIntent(String text, Intent intent, int imageId) {
+            this.text = text;
+            this.intent = intent;
+            this.imageId = imageId;
+        }
+
         String text;
         Intent intent;
+        int imageId = -1;
     }
 }
