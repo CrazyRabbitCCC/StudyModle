@@ -1,6 +1,8 @@
 package com.czrbc.gank.service
 
 import com.czrbc.gank.ViewListener
+import com.czrbc.gank.bean.DayResult
+import com.czrbc.gank.bean.GankResult
 import com.orhanobut.logger.Logger
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -15,11 +17,29 @@ import retrofit2.converter.gson.GsonConverterFactory
  * @author  Gavin
  * @date 2017/06/20.
  */
-class GankHelper(var viewListener: ViewListener) {
+class GankHelper private constructor() {
     private val baseUrl = "http://gank.io/"
-    private val gankIoService:GankIoService = createRetrofitService(GankIoService::class.java)
-    private val map:Map<Int,String> = initMap();
+    private val gankIoService:GankIoService = null!!
+    private val map:Map<Int,String> = null!!
+    private var viewListener: ViewListener? = null;
 
+    companion object {
+        var helper:GankHelper? = null
+        fun getInstance():GankHelper{
+            if (helper==null){
+                helper= GankHelper()
+            }
+            return helper!!
+        }
+    }
+    init {
+        gankIoService= createRetrofitService(GankIoService::class.java)
+        map =  initMap()
+    }
+
+    fun initViewListener(viewListener: ViewListener?){
+        this.viewListener = viewListener;
+    }
 
     /**
      * @param dataType 数据类型： 0->福利 | 1->Android | 2->iOS | 3->休息视频 | 4->拓展资源 | 5->前端 | 6->all
@@ -31,17 +51,25 @@ class GankHelper(var viewListener: ViewListener) {
          var s:String? = map[dataType]
         if (s==null)
             s="all"
+        if (viewListener!=null)
         gankIoService.getData(s,row,page)
                 .filter{  gankResult->!gankResult.error }
                 .flatMap { gankResult -> Observable.fromIterable(gankResult.results) }
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe({gankBean->
-                    viewListener.addData(1,gankBean)
+                    viewListener!!.addData(1,gankBean)
                 },{throwable->
-                    viewListener.showError(1,throwable.message!!)
+                    viewListener!!.showError(1,throwable.message!!)
                     Logger.e(throwable,"ERROR")
                 })
+    }
+
+    fun getHistory():Observable<GankResult<String>>{
+        return gankIoService.getHistory()
+    }
+    fun getDayHistory(year:Int,month:Int,day:Int):Observable<DayResult>{
+        return  gankIoService.getDayHistory(year,month,day)
     }
 
 
@@ -79,5 +107,7 @@ class GankHelper(var viewListener: ViewListener) {
         map.put(6, "all")
         return map
     }
+
+
 
 }

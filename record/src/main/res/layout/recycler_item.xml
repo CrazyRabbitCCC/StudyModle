@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="@dimen/item_padding"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/item_padding"
+        tools:background="#ccc"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="@dimen/title_size"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/title_padding"
+        android:paddingEnd="@dimen/title_padding"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/image"
+        android:maxLines="1"
+        android:textColor="#000000"
+        android:ellipsize="end"
+        tools:text="title"
+        />
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/message_size"
+        android:layout_toEndOf="@id/image"
+        android:layout_below="@id/title"
+        android:layout_toStartOf="@id/time"
+        android:paddingStart="@dimen/message_padding"
+        android:paddingEnd="@dimen/message_padding"
+        android:ellipsize="end"
+        android:textColor="#333333"
+        tools:text="message for message for message for message for message"
+        />
+    <TextView
+        android:id="@+id/time"
+        android:layout_alignParentEnd="true"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_height="18dp"
+        tools:text="16/11/11 23:59:59"/>
+
+
+
+
+</RelativeLayout>

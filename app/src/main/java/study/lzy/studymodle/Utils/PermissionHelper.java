@@ -2,7 +2,6 @@ package study.lzy.studymodle.Utils;
 // @author: lzy  time: 2016/09/29.
 
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
@@ -17,7 +16,7 @@ public  class PermissionHelper {
     private PermissionListener permissionListener;
 
     public PermissionHelper(Activity activity) {
-        this.mActivity = activity;
+        mActivity = activity;
     }
 
 

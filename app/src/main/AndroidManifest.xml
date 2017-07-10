@@ -35,7 +35,7 @@
                   android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".gomoku.GomokuActivity"/>
         <activity android:name=".chess.InterChessActivity"/>
-        <activity android:name=".star.星星页面"/>
+        <activity android:name=".star.StarCnActivty"/>
     </application>
 
 

@@ -104,7 +104,6 @@ public class ChatRecord implements Serializable {
                     test.add(chatRecord2);
                     break;
             }
-
         }
         return test;
     }

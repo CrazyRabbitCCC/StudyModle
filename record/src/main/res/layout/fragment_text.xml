@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TextInputLayout
+            android:padding="@dimen/title_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:textSize="@dimen/title_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/title_save"
+                android:id="@+id/title" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:padding="@dimen/message_padding"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/message"
+                android:textSize="@dimen/message_size"
+                android:gravity="start|top"
+                android:hint="@string/message_save"/>
+
+        </android.support.design.widget.TextInputLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        android:gravity="center_vertical|end"
+        android:layout_gravity="bottom|end">
+
+        <LinearLayout
+            android:id="@+id/record"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/fab1"
+                android:padding="4dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="v_s_e"
+                android:alpha="1" />
+
+            <Button
+                android:id="@+id/fab2"
+                android:padding="4dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="v_p"
+                android:alpha="1" />
+        </LinearLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+    </LinearLayout>
+
+
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:id="@+id/record"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="18dp"-->
+        <!--app:cardElevation="5dp">-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:gravity="center">-->
+        <!--<Button-->
+            <!--android:id="@+id/button1"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp" />-->
+        <!--<Button-->
+            <!--android:id="@+id/button2"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="40dp" />-->
+        <!--<Button-->
+            <!--android:id="@+id/button3"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="40dp" />-->
+        <!--<Button-->
+            <!--android:id="@+id/button4"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp" />-->
+
+    <!--</LinearLayout>-->
+    <!--</android.support.v7.widget.CardView>-->
+
+</FrameLayout>

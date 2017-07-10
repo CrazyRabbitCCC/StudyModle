@@ -1,7 +1,9 @@
 package study.lzy.dribble;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.telephony.TelephonyManager;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,12 +11,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-              String  s=  NetUtils.get("https://api.dribbble.com/v1/users/simplebits");
-                int x=0;
-            }
-        }).start();
+        TelephonyManager tm = (TelephonyManager) this.getSystemService(TELEPHONY_SERVICE);
+        TextView text= (TextView) findViewById(R.id.text);
+        String id = tm.getDeviceId();
+        text.setText(id+"\n"+id.length());
+
+
     }
 }

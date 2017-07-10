@@ -12,7 +12,6 @@ import java.util.List;
 
 import study.lzy.qqimitate.Info.ChatRecord;
 import study.lzy.qqimitate.Info.Friend;
-import study.lzy.qqimitate.Info.Record;
 import study.lzy.qqimitate.Info.User;
 
 // @author: lzy  time: 2016/09/21.
@@ -88,8 +87,8 @@ public class WxApplication extends Application {
         for ( i=0;i<ZiMu.length-1;i++){
             if (c==ZiMu[i])
                 break;
-
         }
+
         return i;
     }
 

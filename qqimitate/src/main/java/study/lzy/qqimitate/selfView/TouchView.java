@@ -60,8 +60,6 @@ public class TouchView extends View {
         image.setLayoutParams(new ViewGroup.LayoutParams(curRadius*2,curRadius*2));
         animation= (AnimationDrawable) getResources().getDrawable(R.drawable.tip_anim);
         image.setImageDrawable(animation);
-
-
     }
 
     public void move(PointF end) {

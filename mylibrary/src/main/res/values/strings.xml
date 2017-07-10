@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Android Library</string>
+    <string name="fragment_error">ERROR:here is no layout</string>
+</resources>

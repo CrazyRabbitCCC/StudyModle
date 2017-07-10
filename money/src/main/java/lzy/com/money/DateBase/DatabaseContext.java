@@ -1,14 +1,14 @@
 package lzy.com.money.DateBase;// @author: lzy  time: 2016/09/02.
 
-import java.io.File;
-import java.io.IOException;
-
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.util.Log;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * 用于支持对存储在SD卡上的数据库的访问
@@ -55,6 +55,7 @@ public class DatabaseContext extends ContextWrapper {
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
+                    isFileCreateSuccess=false;
                 }
             }
             else
@@ -76,18 +77,14 @@ public class DatabaseContext extends ContextWrapper {
      * @param    factory
      */
     @Override
-    public SQLiteDatabase openOrCreateDatabase(String name, int mode,
-                                               SQLiteDatabase.CursorFactory factory) {
-        SQLiteDatabase result = SQLiteDatabase.openOrCreateDatabase(getDatabasePath(name), null);
-        return result;
+    public SQLiteDatabase openOrCreateDatabase(String name, int mode, CursorFactory factory) {
+        return SQLiteDatabase.openOrCreateDatabase(getDatabasePath(name), null);
     }
 
     /**
      * Android 4.0会调用此方法获取数据库。
      *
-     * @see android.content.ContextWrapper#openOrCreateDatabase(java.lang.String, int,
-     *              android.database.sqlite.SQLiteDatabase.CursorFactory,
-     *              android.database.DatabaseErrorHandler)
+     * @see android.content.ContextWrapper#openOrCreateDatabase(String, int,CursorFactory,DatabaseErrorHandler)
      * @param    name
      * @param    mode
      * @param    factory
@@ -96,7 +93,6 @@ public class DatabaseContext extends ContextWrapper {
     @Override
     public SQLiteDatabase openOrCreateDatabase(String name, int mode, CursorFactory factory,
                                                DatabaseErrorHandler errorHandler) {
-        SQLiteDatabase result = SQLiteDatabase.openOrCreateDatabase(getDatabasePath(name), null);
-        return result;
+        return SQLiteDatabase.openOrCreateDatabase(getDatabasePath(name), null);
     }
 }

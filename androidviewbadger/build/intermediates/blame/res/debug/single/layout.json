@@ -1,18 +1,18 @@
 [
     {
-        "merged": "D:\\android\\projects\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
-        "source": "D:\\android\\projects\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\main.xml"
+        "merged": "F:\\lzy\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "F:\\lzy\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\main.xml"
     },
     {
-        "merged": "D:\\android\\projects\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\demos.xml",
-        "source": "D:\\android\\projects\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\demos.xml"
+        "merged": "F:\\lzy\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\demos.xml",
+        "source": "F:\\lzy\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\demos.xml"
     },
     {
-        "merged": "D:\\android\\projects\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\tests.xml",
-        "source": "D:\\android\\projects\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\tests.xml"
+        "merged": "F:\\lzy\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\flag_main.xml",
+        "source": "F:\\lzy\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\flag_main.xml"
     },
     {
-        "merged": "D:\\android\\projects\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\flag_main.xml",
-        "source": "D:\\android\\projects\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\flag_main.xml"
+        "merged": "F:\\lzy\\StudyModle\\androidviewbadger\\build\\intermediates\\res\\merged\\debug\\layout\\tests.xml",
+        "source": "F:\\lzy\\StudyModle\\androidviewbadger\\src\\main\\res\\layout\\tests.xml"
     }
 ]

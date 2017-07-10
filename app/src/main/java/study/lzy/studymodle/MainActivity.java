@@ -2,7 +2,6 @@ package study.lzy.studymodle;// @author: lzy  time: 2016/09/18.
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,13 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.security.Permission;
 import java.util.ArrayList;
 import java.util.List;
 
 import study.lzy.studymodle.AboutHolder.BaseAdapter;
 import study.lzy.studymodle.AboutHolder.Holder;
-import study.lzy.studymodle.AboutHolder.OnClickListener;
 import study.lzy.studymodle.Animation.AnimationActivity1;
 import study.lzy.studymodle.Animation.AnimationActivity2;
 import study.lzy.studymodle.Animation.AnimationActivity3;
@@ -31,7 +28,7 @@ import study.lzy.studymodle.Tree.TreeActivity;
 import study.lzy.studymodle.chess.InterChessActivity;
 import study.lzy.studymodle.gomoku.GomokuActivity;
 import study.lzy.studymodle.star.StarActivity;
-import study.lzy.studymodle.star.星星页面;
+import study.lzy.studymodle.star.StarCnActivty;
 import study.lzy.studymodle.sweep.SweepActivity;
 import study.lzy.studymodle.toolbar.CollapsingActivity;
 import study.lzy.studymodle.toolbar.ToolBarActivity;
@@ -72,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         add("权限管理", PermissionActivity.class);
         add("扫雷", SweepActivity.class);
         add("消灭星星", StarActivity.class);
-        add("消灭星星", 星星页面.class,R.drawable.eaten);
+        add("消灭星星", StarCnActivty.class,R.drawable.eaten);
         add("toolbar", ToolBarActivity.class);
         add("toolbar2", CollapsingActivity.class);
         add("五子棋", GomokuActivity.class);

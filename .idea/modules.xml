@@ -7,9 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/designexample/designexample.iml" filepath="$PROJECT_DIR$/designexample/designexample.iml" />
       <module fileurl="file://$PROJECT_DIR$/drawabletinttest/drawabletinttest.iml" filepath="$PROJECT_DIR$/drawabletinttest/drawabletinttest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dribble/dribble.iml" filepath="$PROJECT_DIR$/dribble/dribble.iml" />
       <module fileurl="file://$PROJECT_DIR$/gank/gank.iml" filepath="$PROJECT_DIR$/gank/gank.iml" />
       <module fileurl="file://$PROJECT_DIR$/money/money.iml" filepath="$PROJECT_DIR$/money/money.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/qqimitate/qqimitate.iml" filepath="$PROJECT_DIR$/qqimitate/qqimitate.iml" />
       <module fileurl="file://$PROJECT_DIR$/treemodle/treemodle.iml" filepath="$PROJECT_DIR$/treemodle/treemodle.iml" />
     </modules>

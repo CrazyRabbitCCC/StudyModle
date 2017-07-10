@@ -149,7 +149,8 @@ public class MessageView extends View {
             else {
 //                frame.addView(view);
             }
-        } else {
+        }
+        else {
             if (frame == null)
                 frame = new FrameLayout(context);
             frame.addView(view);

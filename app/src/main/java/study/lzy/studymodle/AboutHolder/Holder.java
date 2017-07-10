@@ -24,6 +24,7 @@ public class Holder extends RecyclerView.ViewHolder implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        if (listener!=null)
         listener.onClick(v,getPosition());
     }
 }

@@ -1,2 +1,2 @@
-include ':app', ':treemodle', ':money', ':designexample', ':qqimitate', ':drawabletinttest', ':dribble', ':gank'
+include ':app', ':treemodle', ':money', ':designexample', ':qqimitate', ':drawabletinttest', ':gank','mylibrary'
 include ':androidviewbadger'

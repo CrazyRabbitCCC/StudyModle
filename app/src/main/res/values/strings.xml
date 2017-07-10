@@ -199,4 +199,7 @@
         国无人莫我知兮，又何怀乎故都！\n
         既莫足与为美政兮，吾将从彭咸之所居！\n
     </string>
+    <string name="appwidget_text">example</string>
+    <string name="configure">configure</string>
+    <string name="add_widget">EXAMPLE</string>
 </resources>
